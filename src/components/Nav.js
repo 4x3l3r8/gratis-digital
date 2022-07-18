@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../images/logo-white.png";
-import Modal from "./Modal";
 import { ReactComponent as NextIcon } from "../images/right-arrow.svg";
 import ContactUs from "../pages/Contact-us";
+import Modal from "./Modal";
 
 /**
  * Navbar component
@@ -10,21 +10,12 @@ import ContactUs from "../pages/Contact-us";
  */
 const Nav = () => {
   const [showModal, setShowModal] = useState(false);
+  const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
 
-  // Attach nav menu mobile button listener on load of page
-  useEffect(() => {
-    const btn = document.getElementById("menu-btn");
-    const nav = document.getElementById("menu");
-
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("open");
-      nav.classList.toggle("hidden");
-    });
-  });
 
   return (
     <React.Fragment>
-      <nav className="bg-pink-400 relative p-6 mx-auto">
+      <nav className="relative p-6 mx-auto bg-pink-400">
         {/* Flex container */}
         <div className="flex items-center justify-between md:mx-16">
           {/* Logo */}
@@ -33,7 +24,7 @@ const Nav = () => {
           </div>
 
           {/* Menu Items */}
-          <div className="hidden items-center space-x-12 font-poppins text-sm text-white md:flex">
+          <div className="items-center hidden space-x-12 text-sm text-white font-poppins md:flex">
             <a href="/" className="hover:text-darkGrayishBlue">
               ABOUT US
             </a>
@@ -51,7 +42,7 @@ const Nav = () => {
           </div>
 
           {/* Hamburger Icon */}
-          <button id="menu-btn" className="block hamburger md:hidden focus:outline-none">
+          <button id="menu-btn" className={`block hamburger md:hidden ${mobileMenuToggle ? 'open' : ''} focus:outline-none`} onClick={(e) => setMobileMenuToggle(!mobileMenuToggle)}>
             <span className="hamburger-top"></span>
             <span className="hamburger-middle"></span>
             <span className="hamburger-bottom"></span>
@@ -62,7 +53,7 @@ const Nav = () => {
         <div className="block md:hidden">
           <div
             id="menu"
-            className="absolute flex-col flex items-center self-end py-8 hidden mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+            className={`absolute flex-col flex items-center self-end py-8 ${mobileMenuToggle ? '' : 'hidden'} mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md`}
           >
             <a href="/" className="hover:text-darkGrayishBlue">
               ABOUT US
@@ -83,14 +74,14 @@ const Nav = () => {
 
       {/* Contact Us Modal */}
       <Modal visible={showModal} onClose={() => setShowModal(false)}>
-        <div id="backdrop" className="flex w-screen h-screen">
+        <div id="backdrop" className="flex w-screen h-screen overflow-y-auto">
           {/* left side(blur) */}
           <div id="backdrop" className="hidden w-full h-full bg-white opacity-20 md:block"></div>
 
           {/* Right side (Contact form) */}
           <div className="relative w-full h-full bg-[#210045]">
-            <button className="absolute flex rounded-full h-14 w-14 bg-white -left-7 top-5" onClick={() => setShowModal(false)}>
-              <NextIcon className="w-1/2 h-1/2 inline m-auto" />
+            <button className="absolute flex bg-white rounded-full h-14 w-14 -left-7 top-5" onClick={() => setShowModal(false)}>
+              <NextIcon className="inline w-1/2 m-auto h-1/2" />
             </button>
 
             {/* Form component */}

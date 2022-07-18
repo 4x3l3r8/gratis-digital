@@ -39,14 +39,20 @@ function toggleModal() {
 }
 
 const Modal = ({ children, visible, onClose }) => {
-  if (!visible) return null;
+  // if (!visible) return null;
 
   const handleOnBackDropClick = (e) => {
     if (e.target.id === "backdrop") onClose && onClose();
   };
 
   return (
-    <div id="backdrop" onClick={handleOnBackDropClick} className="fixed inset-0 overflow-y-auto overflow-x-hidden items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm">
+    <div
+      id="backdrop"
+      onClick={handleOnBackDropClick}
+      className={`${
+        visible ? "opacity-100 block" : "opacity-0 hidden"
+      } fixed transition-all duration-200 inset-0 overflow-y-auto overflow-x-hidden items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm`}
+    >
       {children}
     </div>
   );
