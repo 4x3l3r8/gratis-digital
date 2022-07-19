@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <React.Fragment>
-      <nav className="relative p-6 mx-auto bg-pink-400">
+      <nav className="relative p-6 mx-auto bg-pink-200">
         {/* Flex container */}
         <div className="flex items-center justify-between md:mx-16">
           {/* Logo */}
