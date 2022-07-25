@@ -8,7 +8,7 @@ const ComingSoon = () => {
       <Nav />
       <div className="flex flex-col items-center w-full my-14">
         <div className="flex flex-col w-4/5 space-y-6 md:w-2/4">
-          <h1 className="text-2xl font-medium text-center text-white uppercase mx-14 md:text-4xl md:font-bold">Something awesome is coming soon</h1>
+          <h1 className="text-4xl font-medium text-center text-white uppercase md:mx-14 md:text-4xl font-bold">Something awesome is coming soon</h1>
           <span className="text-center text-white md:mx-14">
             Your all-in-one affiliate marketing tracking software track, automate and optimize your campaigns.
           </span>
