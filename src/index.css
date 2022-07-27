@@ -26,6 +26,10 @@
   transition: all 0.5s;
 }
 
+.n2{
+  background-color: #A20BDF;
+}
+
 .hamburger-middle {
   transform: translateY(7px);
 }
