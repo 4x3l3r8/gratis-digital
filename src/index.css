@@ -50,3 +50,37 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
+
+/* tailwind supplements */
+.inset-x-1\/5 {
+  left: 12.5%;
+  right: 12.5%;
+}
+
+.w-h-screen {
+  width: 73vmax;
+}
+
+.h-h-screen {
+  height: 73vmax;
+}
+
+.mh-fixed {
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  .w-h-screen {
+    width: 100vmax;
+  }
+
+  .h-h-screen {
+    height: 100vmax;
+  }
+}
+
+@media (max-height: 768px) {
+  .mh-fixed {
+    position: relative;
+  }
+}

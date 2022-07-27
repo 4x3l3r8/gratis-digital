@@ -51,7 +51,7 @@ const Modal = ({ children, visible, onClose }) => {
       onClick={handleOnBackDropClick}
       className={`${
         visible ? "opacity-100 block" : "opacity-0 hidden"
-      } fixed transition-all duration-200 inset-0 overflow-y-auto overflow-x-hidden items-center justify-center bg-transparent bg-opacity-50 backdrop-blur-sm`}
+      } fixed transition-all duration-200 inset-0 overflow-y-auto overflow-x-hidden items-center justify-center z-[100] z- bg-transparent bg-opacity-50 backdrop-blur-md`}
     >
       {children}
     </div>

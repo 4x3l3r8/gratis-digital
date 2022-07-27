@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <React.Fragment>
-      <nav className="relative p-6 mx-auto bg-pink-200">
+      <nav className="relative p-6 mx-auto bg-transparent">
         {/* Flex container */}
         <div className="flex items-center justify-between md:mx-16">
           {/* Logo */}
@@ -25,10 +25,10 @@ const Nav = () => {
 
           {/* Menu Items */}
           <div className="items-center hidden space-x-12 text-sm text-white font-poppins md:flex">
-            <a href="/" className="hover:text-darkGrayishBlue">
+            <a href="/aboutus" className="hover:text-darkGrayishBlue">
               ABOUT US
             </a>
-            <a href="/" className="hover:text-darkGrayishBlue">
+            <a href="/blog" className="hover:text-darkGrayishBlue">
               BLOG
             </a>
 
@@ -53,7 +53,7 @@ const Nav = () => {
         <div className="block md:hidden">
           <div
             id="menu"
-            className={`absolute flex-col flex items-center self-end py-8 ${mobileMenuToggle ? '' : 'hidden'} mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md`}
+            className={`absolute z-50 flex-col flex items-center self-end py-8 ${mobileMenuToggle ? '' : 'hidden'} mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md`}
           >
             <a href="/" className="hover:text-darkGrayishBlue">
               ABOUT US
