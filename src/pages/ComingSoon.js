@@ -57,13 +57,7 @@ const ComingSoon = () => {
               >
                 JOIN OUR WAITING LIST
               </button>
-              {/* <input
-              type="text"
-              name="Last Name"
-              id="lastname"
-              placeholder="Last Name"
-              className="text-white bg-transparent border-t-0 form-input border-b-gray-400 border-x-0 placeholder:text-gray-400 focus:border-t-0 focus:border-x-0"
-            /> */}
+              
             </div>
           </form>
         </div>

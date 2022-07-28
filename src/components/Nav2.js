@@ -26,7 +26,7 @@ const Nav = () => {
                     </div>
 
                     {/* Menu Items */}
-                    <div className="items-center hidden space-x-12 text-sm text-black font-poppins md:flex">
+                    <div className="items-center hidden space-x-12 text-sm font-bold text-black font-poppins md:flex">
                         <a href="/aboutus" className="hover:text-darkGrayishBlue">
                             ABOUT US
                         </a>
