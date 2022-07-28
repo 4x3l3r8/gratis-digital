@@ -57,10 +57,10 @@ const Nav = () => {
                         id="menu"
                         className={`absolute z-50 flex-col flex items-center self-end py-8 ${mobileMenuToggle ? '' : 'hidden'} mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md`}
                     >
-                        <a href="/" className="hover:text-darkGrayishBlue">
+                        <a href="/aboutus" className="hover:text-darkGrayishBlue">
                             ABOUT US
                         </a>
-                        <a href="/" className="hover:text-darkGrayishBlue">
+                        <a href="/blog" className="hover:text-darkGrayishBlue">
                             BLOG
                         </a>
                         {/*  Button  */}
