@@ -1,6 +1,7 @@
 import './App.css';
 import ComingSoon from './pages/ComingSoon';
 import Blog from './pages/Blog';
+import AboutUs from './pages/AboutUs';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<ComingSoon />} />
-        <Route path="/aboutus" element={<ComingSoon />} />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>
     </Router>
